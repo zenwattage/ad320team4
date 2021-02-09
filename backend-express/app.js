@@ -48,7 +48,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   database: 'api_test',
-  password: 'Snowba1!T055'
+  password: ''
 });
 
 // simple query
