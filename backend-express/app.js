@@ -4,10 +4,17 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const indexRouter = require('./routes/index');
+const colorsRouter = require('./routes/colors');
+const carsRouter = require('./routes/cars');
+const appsRouter = require('./routes/apps');
+const usersRouter = require('./routes/users');
+const petsRouter = require('./routes/pets');
+const citiesRouter = require('./routes/cities');
+
+
 var cors = require('cors');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var testAPIRouter = require('./routes/testAPI');
 
 var app = express();
@@ -63,8 +70,8 @@ app.use(function (err, req, res, next) {
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  database: 'api_test',
-  password: ''
+  database: 'DATABASE_NAME_HERE',
+  password: 'YOUR_PASSWORD_HERE'
 });
 
 // simple query
